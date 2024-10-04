@@ -9,7 +9,7 @@ public class MyThread extends Thread {
     public void run() {
         System.out.println("Bem-vindo!");
         try {
-            Thread.sleep(5);
+            Thread.sleep(5000);
         } catch (InterruptedException e) {
             System.out.println("Error: " + e.getMessage());
         }
