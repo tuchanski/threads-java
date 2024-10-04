@@ -4,15 +4,19 @@ import model.MyThread;
 
 public class Main {
 
-    public static void main(String[] args) throws InterruptedException {
+    public static void main(String[] args) {
 
-        MyThread myThread = new MyThread();
+        try {
+            MyThread myThread = new MyThread();
 
-        myThread.start();
-        myThread.join();
+            myThread.start();
+            myThread.join();
 
-        System.out.println("Fim do programa!");
+            System.out.println("Fim do programa!");
 
+        } catch (InterruptedException e){
+            System.out.println("Error: " + e.getMessage());
+        }
     }
 
 }
